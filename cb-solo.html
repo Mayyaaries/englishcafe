@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cabang Solo - English Cafe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+     <style>
+/* Navbar */
+.navbar {
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo img {
+  height: 40px;
+  width: auto;
+}
+
+/* Menu Links */
+.nav-links a {
+  text-decoration: none;
+  color: #5a2c0a;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #e8551d;
+}
+
+/* Hero css */
+.hero-text {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fddac7;
+  color: #e8551d;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 auto 20px;
+}
+
+.badge img {
+  width: 16px;
+  height: 16px;
+}
+
+.hero-text h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #5C1C14;
+  margin: 0;
+}
+
+/* Kartu css oyy */
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding-bottom: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+  height: 550px; 
+}
+
+/* Gambar */
+.card-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.branch-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px;
+}
+
+.branch-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #5a2c0a;
+  min-width: 200px;
+}
+
+/* List di kanan */
+.branch-list {
+  flex: 1;
+}
+.branch-item {
+  margin-bottom: 18px;
+}
+.branch-item h4 {
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 4px;
+  color: #5C1C14;
+}
+.branch-item p {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #963C00;
+  text-align: justify;
+}
+
+
+/* css Tombol kembali */
+.back-wrapper {
+  text-align: right;
+  margin: 20px;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #e8551d;
+  transition: color 0.3s;
+}
+
+.back-btn img {
+  width: 14px;
+  height: 14px;
+}
+
+.back-btn:hover {
+  color: #b53f13;
+}
+
+
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <img src="img/logo-english-cafe.png" alt="English Cafe">
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#tentang">Tentang</a>
+      <a href="index.html#benefit">Benefit</a>
+      <a href="index.html#program">Program</a>
+      <a href="index.html#cabang">Cabang</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Detail Cabang -->
+<!-- Hero Section -->
+<div class="hero-text">
+  <div class="badge">
+    <img src="img/sparkle 2.png " alt="Icon Cabang">
+    <span>Cabang</span>
+  </div>
+  <h1>Berikut Informasi Lebih Lanjut Terkait Cabang</h1>
+</div>
+
+<!-- Kartu cabang -->
+  <div class="card">
+  <div class="card-image">
+    <img src="img/solo.jpg " alt="solo">
+  </div>
+
+  <div class="branch-row">
+    <!-- Judul di kiri -->
+    <h2 class="branch-title"> Solo</h2>
+
+    <!-- List di kanan -->
+    <div class="branch-list">
+      <div class="branch-item">
+        <h4>Bento Kopi UMS</h4>
+        <p>Jl. Menco Raya No.109, Nilagraha, Gonilan, Kec. Kartasura, Kabupaten Sukoharjo, Jawa Tengah 57169</p>
+      </div>
+      <div class="branch-item">
+        <h4>Bento Kopi UNS</h4>
+        <p>Jl. Agung Timur No.14, Mojosongo, Kec. Jebres, Kota Surakarta, Jawa Tengah 57181</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kembali Tomboll -->
+<div class="back-wrapper">
+  <a href="englishcafe.html" class="back-btn">
+    <span>Kembali</span>
+    <img src=" img/back 1.svg" alt="Kembali">
+  </a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cabang Yogyakarta - English Cafe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+
+    
+/* Navbar */
+.navbar {
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+/* Tombol hamburger */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  width: 28px;
+  height: 20px;
+  position: relative;
+  z-index: 10000; /* lebih tinggi dari menu */
+}
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo img {
+  height: 40px;
+  width: auto;
+}
+
+/* Menu Links */
+.nav-links a {
+  text-decoration: none;
+  color: #5a2c0a;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #e8551d;
+}
+
+/* Hero css */
+.hero-text {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fddac7;
+  color: #e8551d;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 auto 20px;
+}
+
+.badge img {
+  width: 16px;
+  height: 16px;
+}
+
+.hero-text h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #5C1C14;
+  margin: 0;
+}
+
+/* Kartu css oyy */
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding-bottom: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+  height: 550px; 
+}
+
+/* Gambar */
+.card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.branch-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px;
+}
+
+.branch-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: #5a2c0a;
+  min-width: 200px;
+}
+
+/* List di kanan */
+.branch-list {
+  flex: 1;
+}
+.branch-item {
+  margin-bottom: 18px;
+}
+.branch-item h4 {
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 4px;
+  margin-left: 15px;
+  color: #5C1C14;
+}
+.branch-item p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 14px;
+  color: #963C00;
+  text-align: justify;
+  margin-left: 15px;
+}
+/* css Tombol kembali */
+.back-wrapper {
+  text-align: right;
+  margin: 20px;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #e8551d;
+  transition: color 0.3s;
+}
+
+.back-btn img {
+  width: 14px;
+  height: 14px;
+}
+
+.back-btn:hover {
+  color: #b53f13;
+}
+
+/* =================== */
+/* RESPONSIVE          */
+/* =================== */
+
+/* Tablet & HP */
+@media (max-width: 1024px) {
+  /* Navbar */
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: #fff;
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    left: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 1500;
+  }
+  .nav-links.show {
+    display: flex;
+    animation: fadeDown 0.3s ease-out;
+  }
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Branch layout */
+  .branch-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .branch-title {
+    font-size: 26px;
+    min-width: auto;
+  }
+  .branch-item h4 {
+    font-size: 16px;
+  }
+  .branch-item p {
+    font-size: 14px;
+  }
+}
+
+/* HP */
+@media (max-width: 768px) {
+  .hero-text {
+    padding: 30px 15px 15px;
+  }
+  .hero-text h1 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  .badge {
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+  .card {
+    margin: 10px;
+  }
+  .card-image {
+    height: 180px;
+  }
+  .branch-item h4 {
+    font-size: 15px;
+  }
+  .branch-item p {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+  .back-wrapper {
+    text-align: center;
+  }
+}
+
+/* HP Kecil */
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 16px;
+  }
+  .branch-title {
+    font-size: 22px;
+  }
+  .card-image {
+    height: 150px;
+  }
+  .branch-item h4 {
+    font-size: 14px;
+  }
+  .branch-item p {
+    font-size: 12px;
+  }
+}
+
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <img src="img/logo-english-cafe.png" alt="English Cafe">
+    </a>
+
+    <!-- Tombol Hamburger -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#tentang">Tentang</a>
+      <a href="index.html#benefit">Benefit</a>
+      <a href="index.html#program">Program</a>
+      <a href="index.html#cabang">Cabang</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    hamburger.classList.toggle("active");
+  });
+</script>
+
+
+<!-- Detail Cabang -->
+<!-- Hero Section -->
+<div class="hero-text">
+  <div class="badge">
+    <img src="img/sparkle 2.png " alt="Icon Cabang">
+    <span>Cabang</span>
+  </div>
+  <h1>Berikut Informasi Lebih Lanjut Terkait Cabang</h1>
+</div>
+
+<!-- Kartu cabang -->
+  <div class="card">
+  <div class="card-image">
+    <img src=" img/Yk.jpg" alt="Yogyakarta">
+  </div>
+
+  <div class="branch-row">
+    <!-- Judul di kiri -->
+    <h2 class="branch-title"> Yogyakarta</h2>
+
+    <!-- List di kanan -->
+    <div class="branch-list">
+      <div class="branch-item">
+        <h4>English Cafe Pusat</h4>
+        <p>Lt 3 Alive Fusion Dining, Jl. Timoho No.49A, RT.003/RW.001, Muja Muju, Kec. Umbulharjo, Kota Yogyakarta.</p>
+      </div>
+      <div class="branch-item">
+        <h4>Bento Kopi Nologaten</h4>
+        <p>Jl. Nologaten, RT.04/RW.01, Tempel, Caturtunggal, Kec. Depok, Kab. Sleman.</p>
+      </div>
+      <div class="branch-item">
+        <h4>ICafe Resto</h4>
+        <p>Jl. Cik Di Tiro No.18, Terban, Kec. Gondokusuman, Kota Yogyakarta 55223.</p>
+      </div>
+      <div class="branch-item">
+        <h4>English Cafe Kota Gede</h4>
+        <p>Prenggan, Kota Gede, Kota Yogyakarta, Daerah Istimewa Yogyakarta.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kembali Tomboll -->
+<div class="back-wrapper">
+  <a href="englishcafe.html" class="back-btn">
+    <span>Kembali</span>
+    <img src=" img/back 1.svg" alt="Kembali">
+  </a>
+</div>
+
+</body>
+</html>
